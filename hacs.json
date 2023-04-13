@@ -1,5 +1,6 @@
 {
     "name": "Google Trending Card",
-    "filename": "dist/google-trends-card.js",
+    "content_in_root": true,
+    "filename": "google-trends-card.js",
     "render_readme": true
 }
