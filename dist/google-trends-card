@@ -1,4 +1,4 @@
-class GoogleTrendingCard extends HTMLElement {
+class GoogleTrendsCard extends HTMLElement {
   constructor() {
     super();
     this._hass = null;
@@ -54,4 +54,4 @@ class GoogleTrendingCard extends HTMLElement {
   
 }
 
-customElements.define("google-trending-card", GoogleTrendingCard);
+customElements.define("google-trends-card", GoogleTrendsCard);
