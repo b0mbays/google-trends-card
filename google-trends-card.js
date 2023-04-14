@@ -26,6 +26,7 @@ class GoogleTrendsCard extends HTMLElement {
     }
 
     this.manageTimer();
+    this.updateContent();
   }
 
   disconnectedCallback() {
