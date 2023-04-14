@@ -13,6 +13,7 @@ class GoogleTrendsCard extends HTMLElement {
 
   set hass(hass) {
     this._hass = hass;
+    this.updateContent();
   }
 
   connectedCallback() {
