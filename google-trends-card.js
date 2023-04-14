@@ -11,7 +11,6 @@ class GoogleTrendsCard extends HTMLElement {
     this.config = config;
   }
 
-
   set hass(hass) {
     this._hass = hass;
   }
@@ -19,8 +18,10 @@ class GoogleTrendsCard extends HTMLElement {
   connectedCallback() {
     if (!this.content) {
       const card = document.createElement("ha-card");
+      const wrapper = document.createElement("div");
+      card.appendChild(wrapper);
       this.content = document.createElement("div");
-      card.appendChild(this.content);
+      wrapper.appendChild(this.content);
       this.appendChild(card);
     }
 
