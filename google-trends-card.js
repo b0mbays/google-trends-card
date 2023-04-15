@@ -47,13 +47,13 @@ class GoogleTrendsCard extends HTMLElement {
           margin-left: 8px;
         }
         .google-trends-text {
-          font-size: 14px;
+          font-size: 23px;
           margin-top: 4px;
           text-align: center;
         }
       </style>
       <div class="google-trends-container">
-        <img src="${googleTrendsLogo}" alt="Google Trends logo" width="150" height="24">
+        <img src="${googleTrendsLogo}" alt="Google Trends logo" width="150" height="35">
       </div>
       <div class="google-trends-text">${this._hass.states[entity].state}</div>
     `;
