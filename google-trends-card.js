@@ -39,6 +39,7 @@ class GoogleTrendsCard extends HTMLElement {
     if (!this.interval) {
       this.interval = setInterval(() => {
         this.index = (this.index + 1) % this.config.entities.length;
+        this.requestUpdate();
       }, 10000);
     }
   }
