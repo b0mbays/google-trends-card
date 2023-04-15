@@ -13,6 +13,9 @@ class GoogleTrendsCard extends HTMLElement {
 
   set hass(hass) {
     this._hass = hass;
+    if (this.content) {
+      this.updateContent();
+    }
   }
 
   connectedCallback() {
@@ -26,7 +29,6 @@ class GoogleTrendsCard extends HTMLElement {
     }
 
     this.manageTimer();
-    this.updateContent();
   }
 
   disconnectedCallback() {
@@ -36,7 +38,7 @@ class GoogleTrendsCard extends HTMLElement {
   manageTimer() {
     if (!this.interval) {
       this.interval = setInterval(() => {
-        this.updateContent();
+        this.index = (this.index + 1) % this.config.entities.length;
       }, 10000);
     }
   }
@@ -51,9 +53,7 @@ class GoogleTrendsCard extends HTMLElement {
     let index = this.index || 0;
     const entity = entities[index];
     this.content.innerHTML = `<h2>${this._hass.states[entity].attributes.friendly_name}</h2><p>${this._hass.states[entity].state}</p>`;
-    this.index = (index + 1) % entities.length;
   }
-
 }
 
 customElements.define("google-trends-card", GoogleTrendsCard);
