@@ -60,5 +60,14 @@ class GoogleTrendsCard extends HTMLElement {
     `;
   }
 }
-
 customElements.define("google-trends-card", GoogleTrendsCard);
+
+if (window.loadCardHelpers) {
+  window.loadCardHelpers().then((helpers) => {
+    helpers.customElements.define("google-trends-card", GoogleTrendsCard);
+  });
+} else {
+  console.error(
+    "Your version of Home Assistant is too old to use this card. Please upgrade to at least Home Assistant 0.106.0."
+  );
+}
