@@ -33,7 +33,7 @@ class GoogleTrendsCard extends HTMLElement {
     }
 
     const entity = this.config.entity;
-    const googleLogo = "https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg";
+    const googleTrendsLogo = "/custom_components/google_trends/www/google-trends-logo.png";
     this.content.innerHTML = `
       <style>
         .google-trends-container {
@@ -49,11 +49,11 @@ class GoogleTrendsCard extends HTMLElement {
         .google-trends-text {
           font-size: 14px;
           margin-top: 4px;
+          text-align: center;
         }
       </style>
       <div class="google-trends-container">
-        <img src="${googleLogo}" alt="Google logo" width="74" height="24">
-        <span class="google-trends-title">Currently Trending:</span>
+        <img src="${googleTrendsLogo}" alt="Google Trends logo" width="150" height="24">
       </div>
       <div class="google-trends-text">${this._hass.states[entity].state}</div>
     `;
