@@ -48,8 +48,9 @@ class GoogleTrendsCard extends HTMLElement {
         }
         .google-trends-text {
           font-size: 23px;
-          margin-top: 4px;
+          margin-top: -10px;
           text-align: center;
+          padding-bottom: 16px;
         }
       </style>
       <div class="google-trends-container">
