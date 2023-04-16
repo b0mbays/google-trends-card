@@ -33,6 +33,7 @@ class GoogleTrendsCard extends HTMLElement {
     }
 
     const entity = this.config.entity;
+    const fontSize = this.config.fontSize || '23px';
     const googleTrendsLogo = "/custom_components/google_trends/www/google-trends-logo.png";
     this.content.innerHTML = `
       <style>
@@ -41,13 +42,8 @@ class GoogleTrendsCard extends HTMLElement {
           align-items: center;
           padding: 8px 16px;
         }
-        .google-trends-title {
-          font-size: 16px;
-          font-weight: bold;
-          margin-left: 8px;
-        }
         .google-trends-text {
-          font-size: 23px;
+          font-size: ${fontSize};
           margin-top: -10px;
           text-align: center;
           padding-bottom: 16px;
