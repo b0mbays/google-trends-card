@@ -27,6 +27,7 @@ This custom card displays the top trending searches from Google Trends on your d
 1. Add the new card to your dashboard and using the "manual" card configuration. You can either do this via the "Add card" option, or add this manually inside the dashboard yaml file.
 
 ```yaml
-type: 'custom:google-trends-card'
+type: custom:google-trends-card
 entity: sensor.google_trend
+fontSize: 23px #Default is 23px
 ```
