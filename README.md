@@ -17,6 +17,7 @@ This custom card displays the top trending searches from Google Trends on your d
 2. Click on the three dots in the top right corner and choose "Custom repositories".
 3. Enter `b0mbays/google-trends-card` in the "Add custom repository" field, select "Lovelace" from the "Category" dropdown, and click on the "Add" button.
 4. Once the custom repository is added, you can install the custom card through HACS. You should see "Google Trending Card" in the "Frontend" tab. Click on "Download" to add it to your Home Assistant instance.
+5. Reload your browser.
 
 <br/><br/>
 
