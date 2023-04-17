@@ -1,4 +1,4 @@
-# <center>Google Trending Card </center>
+# <center>HA - Google Trending Card </center>
 
 
 This custom card displays the top trending searches from Google Trends on your dashboard. You will need to have installed the Google Trends integration from [here](https://github.com/b0mbays/google_trends) before using this card.
